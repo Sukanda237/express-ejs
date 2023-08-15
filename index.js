@@ -1,6 +1,6 @@
 // modul bawaan dari node js untuk menuntukan direktori atau pengalamat folder supaya tidak terjadi error
 const path = require('path');
-// memanggil library express js kedalam project kita 
+// memanggil library express js kedalam project kita dan membuat objek dari express js
 const express = require('express');
 
 // membuat object dari express js 
@@ -28,6 +28,15 @@ app.get('/t/:tag', (req, res) => {
 app.get('/', (req,res) => {
     res.render('home');
 } );
+
+app.get('/cats',(req, res) => {
+
+    const cats = [
+        'embul','unyil','usro', 'timi', 'ujang' 
+    ]
+
+    res.render('cats',{ cats });
+});
 
 app.get('/rand', (req, res) => {
 
