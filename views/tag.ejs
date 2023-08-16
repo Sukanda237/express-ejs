@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= data.title %></title>
-    <link rel="stylesheet" href="/app.css">
-</head>
-<body>
+
+<%- include('partials/header.ejs') %>
+<%- include('partials/navbar.ejs') %>
+
+
     <% if(data.img) { %>
         <img src="<%= data.img %>" alt="">
     <% } %>
@@ -20,5 +16,5 @@
             <p><%= post.title %> - <%= post.author %></p>
         </article>
     <% } %>
-</body>
-</html>
+
+<%- include('partials/footer.ejs') %>
